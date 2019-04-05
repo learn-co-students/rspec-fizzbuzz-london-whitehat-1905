@@ -3,13 +3,9 @@
 
 def fizzbuzz num
     case "#{num%3 == 0}#{num%5 == 0}".gsub(/false/,"-").gsub(/true/,"o")
-    when "o-"
-        "Fizz"
-    when "-o"
-        "Buzz"
-    when "oo"
-        "FizzBuzz"
-    else
-        nil
+    when "o-" then "Fizz"
+    when "-o" then "Buzz"
+    when "oo" then "FizzBuzz"
+    when "--" then nil
     end
 end
